@@ -1008,7 +1008,7 @@ img {
 }
 .menu-container .menu-toggle:hover {
   color: var(--accent-color);
-  transition: color 250mcubic-bezier 0.4, 0, 0.2, 1;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .menu-container.is-open {
   transform: translateX(0);
