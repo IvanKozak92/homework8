@@ -36,9 +36,8 @@ cursor: pointer;
     padding: 48px 40px;
     z-index: 777;
     overflow-y: scroll;
-    & {
-        overflow: auto;
-        }
+    overflow: auto;
+        
 
     & .menu-toggle {
     position: absolute;
@@ -66,13 +65,16 @@ cursor: pointer;
 
 .menu__link {
     font-weight: 500;
-    font-size: 40px;
+    font-size: 26px;
     line-height: 1.18;
     letter-spacing: 0.02em;
     cursor: pointer;
 
     &--current {
         color: var(--accent-color);
+    }
+    @media screen and (min-width: 480px) {
+    font-size: 40px;
     }
 }
 
@@ -91,27 +93,40 @@ padding: 16px 0;
 }
 .menu__tel {
 font-weight: 500;
-font-size: 34px;
+font-size: 22px;
 line-height: 1.18;
 letter-spacing: 0.02em;
 color: var(--accent-color);
+
+@media screen and (min-width: 480px) {
+        font-size: 34px;
+    }
 }
 
 .menu__mail {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 1.17;
     letter-spacing: 0.02em;
     color: var(--title-text-color);
+
+@media screen and (min-width: 480px) {
+        font-size: 24px;
+        }
 }
 
 .menu-links__list {
     display: flex;
+    width: 100%;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     margin-top: 64px;
+
+    @media screen and (min-width: 480px) {
+            font-size: 18px;
+        }
 }
 
 .menu-links__link {
