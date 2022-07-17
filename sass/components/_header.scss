@@ -4,9 +4,8 @@
 
  .header__container {
   position: relative;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+  display: flex;
+  justify-content: space-between;
  }
 
 
@@ -20,8 +19,22 @@
    letter-spacing: 0.02em;
    margin-top: 0;
    margin-bottom: 0;
-   margin-left: 93px;
+   margin-left: 88px;
    padding-left: 0;
+   & .header__link {
+      display: block;
+      padding: 32px 0;
+    }
+   & .header__nav-item+.header__nav-item {
+       margin-left: 50px;
+    }
+
+  @media screen and (max-width: 767px) {
+      display: none;
+    }
+  @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+    }
  }
 
 .header__link {
@@ -43,17 +56,7 @@
    border-radius: 2px;
    background-color: var(--accent-color);
  }
-
- .header__nav {
-  .header__link{
-   display: block;
-   padding: 32px 0;
-  }
-  // & .header__nav-item+.header__nav-item {
-  //      margin-left: 50px;
-  //    }
- }
-
+ 
  /* contacts */
  .header__contact {
    font-weight: 500;
@@ -65,31 +68,54 @@
    &:focus {
    color: var(--accent-color);
       }
+  @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
  }
 
-//  .header {
-//   .list {
-//    display: flex;
-//   }
-//  }
+ .header {
+  .list {
+  @media screen and (min-width: 768px) {
+        display: flex;
+      }
+  }
+ }
 
-//  .header__contact-item + .header__contact-item {
-//    margin-left: 50px;
-//  }
+ .header__contact-item + .header__contact-item {
+  @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+    }
+ }
 
  .header__contact {
-  // @include display-center();
-   padding: 32px 0;
+  @include display-center();
+   padding: 5px 0;
+  @media screen and (min-width: 1200px) {
+      padding: 32px 0;
+    }
  }
 
  .header__contacts {
+ 
    margin-top: 0;
    margin-bottom: 0;
    margin-left: auto;
    padding-left: 0;
+  @media screen and (max-width: 767px) {
+      display: none;
+    }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
  }
 
  .header__icon {
    margin-right: 10px;
    fill: currentColor;
+  @media screen and (max-width: 1199px) {
+      margin-right: 8px;
+    }
  }
